@@ -195,8 +195,12 @@ document.getElementById('yr').textContent = new Date().getFullYear();
       if(res.ok){ card.classList.add('ok'); }
       else { throw new Error(res.j && res.j.error || 'fail'); }
     })
-    .catch(function(){
-      msg.className='msg err'; msg.textContent='Something went wrong on our end. Try again in a moment.';
+    .catch(function(err){
+      msg.className='msg err';
+      msg.textContent = (err && err.message === 'not_configured')
+        ? 'Signups open very soon. Please check back shortly.'
+        : 'Something went wrong on our end. Try again in a moment.';
+      msg.setAttribute('data-code', err && err.message || '');
     })
     .finally(function(){ btn.disabled=false; btn.textContent='Count me in'; });
   });
