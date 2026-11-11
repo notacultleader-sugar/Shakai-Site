@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shakai Barber Academy · Coming soon</title>
+<meta name="description" content="Barbering lessons, step by step, from the chairs at Society Barbers. Join the list and get a free lesson when Shakai Barber Academy launches.">
+<meta name="theme-color" content="#100D18">
+<link rel="canonical" href="https://shakaiacademy.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shakaiacademy.com/">
+<meta property="og:title" content="Shakai Barber Academy · Coming soon">
+<meta property="og:description" content="Barbering lessons, step by step. Join the list and get a free lesson at launch.">
+<meta property="og:image" content="https://shakaiacademy.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,800&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@900&display=swap">
+<style>
+:root{
+  --y:#EDFF00; --p:#FF1493; --ink:#100D18; --ink-2:#1a1524; --line:#2c2537; --w:#F4F1E8; --muted:#a8a1b3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ink);-webkit-text-size-adjust:100%}
+body{min-height:100svh;background:var(--ink);color:var(--w);font:400 16px/1.55 Montserrat,system-ui,-apple-system,sans-serif;overflow-x:hidden;
+  padding:max(20px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+
+/* backdrop */
+.bg{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(60% 45% at 50% 30%,rgba(255,20,147,.16),transparent 70%),radial-gradient(50% 40% at 50% 85%,rgba(237,255,0,.05),transparent 70%)}
+.grid{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.06;
+  background-image:linear-gradient(var(--w) 1px,transparent 1px),linear-gradient(90deg,var(--w) 1px,transparent 1px);background-size:48px 48px;
+  -webkit-mask-image:radial-gradient(70% 55% at 50% 35%,#000 15%,transparent 75%);mask-image:radial-gradient(70% 55% at 50% 35%,#000 15%,transparent 75%)}
+.ghost{position:fixed;z-index:0;font:900 min(60vw,520px)/1 "Noto Sans JP",sans-serif;color:rgba(255,20,147,.045);pointer-events:none;user-select:none}
+.ghost.l{left:-.28em;top:12vh}.ghost.r{right:-.28em;bottom:-.1em}
+
+main{position:relative;z-index:1;max-width:560px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px;padding-top:2vh}
+
+/* logo, built from the same cut layers as the app splash */
+.logo{position:relative;width:min(300px,72vw);aspect-ratio:470/545}
+.g{position:absolute;inset:0}
+.g>i{position:absolute;inset:0;display:block;-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.frame i{background:var(--y);-webkit-mask-image:url(/assets/frame.png);mask-image:url(/assets/frame.png)}
+.kanji i{background:var(--p);-webkit-mask-image:url(/assets/kanji.png);mask-image:url(/assets/kanji.png)}
+.word i{background:var(--p);-webkit-mask-image:url(/assets/word.png);mask-image:url(/assets/word.png)}
+.academy i{background:var(--w);-webkit-mask-image:url(/assets/academy.png);mask-image:url(/assets/academy.png)}
+.society i{background:var(--w);-webkit-mask-image:url(/assets/society.png);mask-image:url(/assets/society.png)}
+.dash i{background:var(--y);-webkit-mask-image:url(/assets/dash.png);mask-image:url(/assets/dash.png)}
+.g-frame{filter:drop-shadow(0 0 6px rgba(237,255,0,.7)) drop-shadow(0 0 22px rgba(237,255,0,.35));will-change:opacity}
+.blade{position:absolute;left:0;top:70.5%;height:15.5%;width:2px;background:var(--w);opacity:0;transform:skewX(-24deg);
+  box-shadow:0 0 8px 2px rgba(255,20,147,.8),0 0 24px 6px rgba(255,20,147,.35)}
+
+/* reveal: square powers on and pulses like neon; kanji stays crisp and still */
+.g-frame{opacity:0;animation:neon .7s steps(1,end) .2s both,hum 3.6s ease-in-out .9s infinite}
+.frame{animation:frameIn .6s cubic-bezier(.2,.8,.2,1) .2s both}
+.word{animation:cut .42s cubic-bezier(.7,0,.2,1) 1.25s both}
+.blade{animation:blade .42s cubic-bezier(.7,0,.2,1) 1.25s both}
+.academy{animation:track .6s cubic-bezier(.16,1,.3,1) 1.75s both}
+.dash{animation:dashes .5s cubic-bezier(.16,1,.3,1) 2.05s both}
+.society{animation:fade .5s ease-out 2.15s both}
+.after{animation:rise .7s cubic-bezier(.16,1,.3,1) 2.3s both}
+@keyframes neon{0%{opacity:0}12%{opacity:1}20%{opacity:.15}34%{opacity:1}46%{opacity:.35}58%,100%{opacity:1}}
+@keyframes hum{0%{opacity:1}4%{opacity:.55}6%{opacity:1}50%{opacity:.12}100%{opacity:1}}
+@keyframes frameIn{from{clip-path:inset(50% 50% 50% 50%);transform:scale(.94)}to{clip-path:inset(-10%);transform:none}}
+@keyframes cut{from{clip-path:polygon(-10% 70%,-14% 70%,-30% 86%,-26% 86%)}to{clip-path:polygon(-10% 70%,120% 70%,110% 86%,-26% 86%)}}
+@keyframes blade{0%{left:2%;opacity:0}15%,85%{opacity:1}100%{left:96%;opacity:0}}
+@keyframes track{from{opacity:0;transform:scaleX(1.18)}to{opacity:1;transform:none}}
+@keyframes dashes{from{opacity:0;transform:scaleX(.2)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.after{display:flex;flex-direction:column;align-items:center;gap:26px;width:100%}
+.badge{display:inline-flex;align-items:center;gap:12px;font:700 12px/1 Montserrat,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:var(--y)}
+.badge i{display:block;width:26px;height:5px;background:var(--y);transform:skewX(-35deg);box-shadow:0 0 10px rgba(237,255,0,.6)}
+h1{font:800 italic clamp(34px,9vw,52px)/1 "Exo 2",sans-serif;text-transform:uppercase;letter-spacing:-.005em;text-wrap:balance}
+h1 em{font-style:inherit;color:var(--p);text-shadow:0 0 22px rgba(255,20,147,.45)}
+.lede{color:var(--muted);max-width:44ch;font-size:16px;text-wrap:pretty}
+.lede strong{color:var(--w);font-weight:600}
+
+/* signup */
+.card{width:100%;background:linear-gradient(180deg,rgba(26,21,36,.92),rgba(16,13,24,.92));border:1px solid var(--line);border-radius:14px;padding:22px 18px;
+  box-shadow:0 24px 70px -30px rgba(255,20,147,.45);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--p),var(--y),transparent)}
+.card h2{font:800 italic 22px/1.1 "Exo 2",sans-serif;text-transform:uppercase}
+.card h2 span{color:var(--y)}
+.card p.sub{color:var(--muted);font-size:14px;margin-top:6px}
+form{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+input[type=email]{width:100%;font:500 17px/1.2 Montserrat,sans-serif;color:var(--w);background:#0b0911;border:1px solid var(--line);border-radius:10px;padding:16px 14px;outline:none;
+  transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none}
+input[type=email]::placeholder{color:#6f6879}
+input[type=email]:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(255,20,147,.25)}
+button{font:800 italic 18px/1 "Exo 2",sans-serif;text-transform:uppercase;letter-spacing:.04em;color:var(--ink);background:var(--y);border:0;border-radius:10px;padding:17px 18px;cursor:pointer;
+  box-shadow:0 0 0 1px var(--y),0 0 26px rgba(237,255,0,.35);transition:transform .1s,filter .15s;-webkit-tap-highlight-color:transparent}
+button:hover{filter:brightness(1.06)}button:active{transform:scale(.985)}
+button[disabled]{opacity:.6;cursor:progress}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.fine{font-size:12px;color:#7d7688;margin-top:10px}
+.msg{font-size:14px;margin-top:10px;min-height:1em}
+.msg.err{color:#ff8fc6}
+.done{display:none;flex-direction:column;align-items:center;gap:8px;padding:6px 0}
+.done b{font:800 italic 24px/1.1 "Exo 2",sans-serif;text-transform:uppercase;color:var(--y)}
+.done p{color:var(--muted);font-size:14px}
+.card.ok form,.card.ok .fine,.card.ok .msg,.card.ok h2,.card.ok .sub{display:none}
+.card.ok .done{display:flex}
+
+/* social */
+.follow{display:flex;flex-direction:column;align-items:center;gap:14px}
+.follow small{font:600 11px/1 Montserrat,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.socials{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.socials a{width:52px;height:52px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--w);background:rgba(26,21,36,.6);
+  transition:border-color .15s,color .15s,box-shadow .15s}
+.socials a:hover,.socials a:focus-visible{border-color:var(--p);color:var(--p);box-shadow:0 0 18px rgba(255,20,147,.35);outline:none}
+.socials svg{width:22px;height:22px;fill:currentColor}
+.handle{font:700 14px/1 Montserrat,sans-serif;letter-spacing:.06em;color:var(--w)}
+
+footer{position:relative;z-index:1;text-align:center;color:#6f6879;font-size:12px;margin-top:44px;letter-spacing:.04em}
+footer a{color:inherit}
+
+@media (min-width:700px){ main{gap:34px;padding-top:5vh} .logo{width:320px} .card{padding:26px 26px} form{flex-direction:row} form input{flex:1} button{white-space:nowrap} }
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div><div class="grid" aria-hidden="true"></div>
+<div class="ghost l" aria-hidden="true">社</div><div class="ghost r" aria-hidden="true">会</div>
+
+<main>
+  <div class="logo" role="img" aria-label="社会 Shakai Barber Academy, by Society Barbers">
+    <div class="g g-frame"><div class="g frame"><i></i></div></div>
+    <div class="g kanji"><i></i></div>
+    <div class="g word"><i></i></div>
+    <div class="g academy"><i></i></div>
+    <div class="g dash"><i></i></div>
+    <div class="g society"><i></i></div>
+    <div class="blade"></div>
+  </div>
+
+  <div class="after">
+    <span class="badge"><i></i>Coming soon<i></i></span>
+    <h1>Barbering lessons, <em>step by step.</em></h1>
+    <p class="lede">Fades, tapers, beard work and more, taught by the barbers behind <strong>Society Barbers</strong> and broken down so you can actually learn it. Join the list and be first in when the doors open.</p>
+
+    <section class="card" id="card" aria-labelledby="signup-title">
+      <h2 id="signup-title">Get a <span>free lesson</span> at launch</h2>
+      <p class="sub">Drop your email. We'll send you a full lesson free the day Shakai opens.</p>
+      <form id="signup" novalidate>
+        <label for="email" class="hp">Email address</label>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="you@email.com" required>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input name="company" tabindex="-1" autocomplete="off"></label></div>
+        <button type="submit" id="go">Count me in</button>
+      </form>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      <p class="fine">No spam. Just launch news and your free lesson. Unsubscribe any time.</p>
+      <div class="done" role="status">
+        <b>You're on the list</b>
+        <p>Watch your inbox. Your free lesson lands on launch day.</p>
+      </div>
+    </section>
+
+    <div class="follow">
+      <small>Follow along</small>
+      <div class="socials">
+        <a href="https://www.instagram.com/shakaiacademy" target="_blank" rel="noopener" aria-label="Shakai on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a>
+        <a href="https://www.tiktok.com/@shakaiacademy" target="_blank" rel="noopener" aria-label="Shakai on TikTok"><svg viewBox="0 0 24 24"><path d="M19.6 6.7a4.8 4.8 0 01-3.8-4.2V2h-3.4v13.4a2.9 2.9 0 01-5.2 1.7 2.9 2.9 0 013.2-4.5V9.1a6.3 6.3 0 00-5.4 10.7 6.3 6.3 0 0010.8-4.4V8.6a8.2 8.2 0 004.8 1.5V6.8l-1-.1z"/></svg></a>
+        <a href="https://www.youtube.com/@shakaiacademy" target="_blank" rel="noopener" aria-label="Shakai on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+        <a href="https://www.facebook.com/shakaiacademy" target="_blank" rel="noopener" aria-label="Shakai on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4H7.1v-3.5h3v-2.6c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.4l-.5 3.5h-2.9V24C19.6 23.1 24 18.1 24 12.1z"/></svg></a>
+      </div>
+      <span class="handle">@shakaiacademy</span>
+    </div>
+  </div>
+</main>
+
+<footer>© <span id="yr">2026</span> Shakai Barber Academy · by Society Barbers</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){
+  var form = document.getElementById('signup'), card = document.getElementById('card'),
+      msg = document.getElementById('msg'), btn = document.getElementById('go'), input = document.getElementById('email');
+  var ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = input.value.trim();
+    msg.className = 'msg'; msg.textContent = '';
+    if(!ok.test(email)){ msg.className='msg err'; msg.textContent='That email doesn’t look right. Mind checking it?'; input.focus(); return; }
+    btn.disabled = true; btn.textContent = 'Adding you…';
+    fetch('/api/subscribe', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({email: email, company: form.company.value, ref: document.referrer || ''})})
+    .then(function(r){ return r.json().catch(function(){return {};}).then(function(j){ return {ok:r.ok, j:j}; }); })
+    .then(function(res){
+      if(res.ok){ card.classList.add('ok'); }
+      else { throw new Error(res.j && res.j.error || 'fail'); }
+    })
+    .catch(function(){
+      msg.className='msg err'; msg.textContent='Something went wrong on our end. Try again in a moment.';
+    })
+    .finally(function(){ btn.disabled=false; btn.textContent='Count me in'; });
+  });
+})();
+</script>
+</body>
+</html>
