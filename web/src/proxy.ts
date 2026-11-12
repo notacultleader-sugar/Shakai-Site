@@ -39,7 +39,9 @@ async function previewGate(request: NextRequest) {
     try {
       const decoded = new TextDecoder().decode(Uint8Array.from(atob(header.slice(6)), (c) => c.charCodeAt(0)));
       const i = decoded.indexOf(":");
-      if (same(decoded.slice(0, i), user) && same(decoded.slice(i + 1), pass)) return null;
+      // Ignore capitals in the username and stray spaces (phones add both).
+      const name = decoded.slice(0, i).trim().toLowerCase();
+      if (same(name, user.trim().toLowerCase()) && same(decoded.slice(i + 1).trim(), pass.trim())) return null;
     } catch {
       // fall through to the prompt
     }

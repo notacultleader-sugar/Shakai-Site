@@ -7,6 +7,8 @@
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
   "observability": { "enabled": true },
+  // Keep variables added in the Cloudflare dashboard when this deploys.
+  "keep_vars": true,
 
   // Test preview: password locked, at its own address. shakaiacademy.com itself is untouched.
   // At launch: remove PREVIEW_USER and change the domain.
