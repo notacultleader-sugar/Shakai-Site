@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FoundingBanner } from "@/components/FoundingBanner";
 import { Pricing } from "@/components/Pricing";
 import { tierName } from "@/lib/plans";
 import { getViewer } from "@/lib/viewer";
@@ -27,6 +28,7 @@ export default async function Join({ searchParams }: { searchParams: Promise<Rec
         </p>
         {q.error && ERRORS[q.error] && <p className="err">{ERRORS[q.error]}</p>}
       </div>
+      {v.tier === "free" && <FoundingBanner />}
       <Pricing
         viewerTier={v.tier}
         paying={paying}

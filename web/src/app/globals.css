@@ -234,3 +234,8 @@ main { flex: 1; padding-bottom: 64px; }
 .demobar button[aria-pressed="true"] { background: var(--y); color: var(--ink); border-color: var(--y); }
 body.has-demo main { padding-bottom: 130px; }
 .level-nav svg, .pill svg { width: 11px; height: 11px; fill: currentColor; flex: none; }
+.founding { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; margin-bottom: 18px; }
+.founding .h3 em { font-style: inherit; color: var(--p); }
+.founding-count { display: flex; align-items: center; gap: 12px; width: 100%; }
+.founding-count .bar { flex: 1; max-width: 260px; }
+.founding-count b { color: var(--y); }

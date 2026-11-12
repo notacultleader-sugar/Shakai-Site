@@ -18,7 +18,13 @@ soon page at the repo root keeps running until launch.
 | Intermediate | $15 | $150 | Free + Beginner + Intermediate |
 | Pro | $20 | $200 | Everything, including Advanced and bonus series |
 
-Prices and wording: `src/lib/plans.ts`. Stripe prices: `scripts/stripe-setup.mjs`.
+Prices and wording: `src/lib/plans.ts`.
+
+**Founding members:** the first 500 paying members keep their price for as long as they
+stay subscribed (`FOUNDING_LIMIT` in `src/lib/plans.ts`). The plans page shows how many
+spots are left and hides the banner once they're gone. To raise prices later, create new
+Stripe prices and move the lookup key to them (`transfer_lookup_key`). Existing
+subscriptions stay on their old price automatically. Stripe prices: `scripts/stripe-setup.mjs`.
 
 ## Lessons
 

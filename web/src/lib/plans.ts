@@ -56,3 +56,8 @@ export const parseLookupKey = (key: string | null | undefined): { tier: PaidTier
   if (interval !== "month" && interval !== "year") return null;
   return { tier: tier as PaidTier, interval };
 };
+
+// Founding members: the first FOUNDING_LIMIT paying members keep today's prices for as
+// long as they stay subscribed. Stripe does this on its own: raising prices later means
+// making new prices, and existing subscriptions stay on the old ones.
+export const FOUNDING_LIMIT = 500;

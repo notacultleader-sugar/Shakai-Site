@@ -2,7 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { cookies } from "next/headers";
 import { isDemo } from "./config";
-import { type Tier, isTier } from "./plans";
+import { FOUNDING_LIMIT, type Tier, isTier } from "./plans";
 import { supabaseServer } from "./supabase/server";
 
 export type Viewer = {
@@ -65,3 +65,16 @@ export async function getVideos(codes: string[]): Promise<Map<string, { playback
   const { data } = await sb.from("videos").select("lesson_code, mux_playback_id, duration_seconds").in("lesson_code", codes);
   return new Map((data || []).filter((r) => r.mux_playback_id).map((r) => [r.lesson_code, { playbackId: r.mux_playback_id, seconds: r.duration_seconds }]));
 }
+
+// How many founding member spots are left, or null if we can't tell (demo mode).
+export const getFoundingSpotsLeft = cache(async (): Promise<number | null> => {
+  if (isDemo()) return FOUNDING_LIMIT;
+  if (!process.env.SUPABASE_SERVICE_ROLE_KEY) return null;
+  const { supabaseAdmin } = await import("./supabase/server");
+  const { count, error } = await supabaseAdmin()
+    .from("profiles")
+    .select("id", { count: "exact", head: true })
+    .not("stripe_subscription_id", "is", null);
+  if (error || count === null) return null;
+  return Math.max(0, FOUNDING_LIMIT - count);
+});

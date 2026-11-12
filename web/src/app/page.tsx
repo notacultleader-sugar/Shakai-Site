@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { FoundingBanner } from "@/components/FoundingBanner";
 import { Pricing } from "@/components/Pricing";
 import { LESSONS, LEVELS, lessonsIn, modulesIn } from "@/lib/catalog";
 import { tierName } from "@/lib/plans";
 import { getViewer } from "@/lib/viewer";
 
 const FAQ: [string, string][] = [
+  ["What is the founding member price?", "The first 500 people to join a paid plan keep the price they joined at for as long as they stay a member. When prices go up for new members, yours stays the same."],
   ["Do higher plans include the lower ones?", "Yes. Intermediate includes everything in Beginner, and Pro includes the whole academy, bonus series and all."],
   ["What can I watch for free?", "Make a free account and you get the starter lessons, made for people who have never picked up clippers. No card needed."],
   ["Can I cancel or switch plans?", "Any time, from your account page. If you cancel, you keep access until the end of the period you paid for."],
@@ -72,6 +74,7 @@ export default async function Home() {
             <h2 className="h2">Pick your level. <em>Move up any time.</em></h2>
             <p className="lede">Every plan includes the levels below it. Prices in Canadian dollars. Cancel whenever you like.</p>
           </div>
+          {v.tier === "free" && <FoundingBanner />}
           <Pricing viewerTier={v.tier} paying={v.tier !== "free" && v.hasBilling} />
           {!v.signedIn && (
             <div className="card free-strip">
