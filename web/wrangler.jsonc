@@ -1,12 +1,14 @@
 {
   // Cloudflare Worker that serves the members site (built with OpenNext).
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "shakai-web",
+  "name": "shakai-site",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
   "observability": { "enabled": true },
+  // Keep variables added in the Cloudflare dashboard when this deploys.
+  "keep_vars": true,
 
   // Test preview: password locked, at its own address. shakaiacademy.com itself is untouched.
   // At launch: remove PREVIEW_USER and change the domain.
