@@ -46,7 +46,13 @@ async function previewGate(request: NextRequest) {
       // fall through to the prompt
     }
   }
-  return new NextResponse("Password needed.", {
+  // Shown if you tap Cancel on the login box, to help spot setup problems.
+  const message = !pass
+    ? "Shakai test site: the password isn't set up on the server yet (PREVIEW_PASSWORD is missing)."
+    : header
+      ? "Shakai test site: wrong username or password. Reload to try again."
+      : "Shakai test site: password needed. Reload to try again.";
+  return new NextResponse(message, {
     status: 401,
     headers: { "WWW-Authenticate": 'Basic realm="Shakai test site", charset="UTF-8"', "X-Robots-Tag": "noindex" },
   });
