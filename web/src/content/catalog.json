@@ -1,0 +1,1530 @@
+[
+ {
+  "code": "F1",
+  "title": "Start here",
+  "level": "free",
+  "lessons": [
+   {
+    "code": "F1.1",
+    "title": "What a barber actually does all day"
+   },
+   {
+    "code": "F1.2",
+    "title": "The five tools you will hear about most"
+   },
+   {
+    "code": "F1.3",
+    "title": "How a haircut is built: top, sides and back"
+   },
+   {
+    "code": "F1.4",
+    "title": "Clipper guard numbers, explained simply"
+   },
+   {
+    "code": "F1.5",
+    "title": "How to practice at home before your first client"
+   },
+   {
+    "code": "F1.6",
+    "title": "Free lesson: holding your tools and your first clean taper"
+   }
+  ]
+ },
+ {
+  "code": "B1",
+  "title": "Welcome and mindset",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B1.1",
+    "title": "Welcome to Shakai: who we are, Society Barbers story"
+   },
+   {
+    "code": "B1.2",
+    "title": "How to use the app and follow the levels"
+   },
+   {
+    "code": "B1.3",
+    "title": "What a barber actually does all day"
+   },
+   {
+    "code": "B1.4",
+    "title": "Paths into barbering: school, apprenticeship, licensing basics"
+   },
+   {
+    "code": "B1.5",
+    "title": "Your starter kit shopping list, budget vs. pro"
+   },
+   {
+    "code": "B1.6",
+    "title": "How to practice: mannequin, friends, family"
+   },
+   {
+    "code": "B1.7",
+    "title": "Patience: why your first 100 cuts won't be perfect"
+   }
+  ]
+ },
+ {
+  "code": "B2",
+  "title": "The shop and your station",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B2.1",
+    "title": "Tour of a working barbershop"
+   },
+   {
+    "code": "B2.2",
+    "title": "Setting up your station from empty"
+   },
+   {
+    "code": "B2.3",
+    "title": "Where every tool lives: a layout that saves time"
+   },
+   {
+    "code": "B2.4",
+    "title": "Keeping your station tidy during a cut"
+   },
+   {
+    "code": "B2.5",
+    "title": "Resetting your station between clients (60 second reset)"
+   },
+   {
+    "code": "B2.6",
+    "title": "Sweeping hair the right way: when, how, where it goes"
+   },
+   {
+    "code": "B2.7",
+    "title": "Brooms, dustpans, hair vacuums and hair magnets"
+   },
+   {
+    "code": "B2.8",
+    "title": "Cleaning the barber chair: vinyl, base, headrest"
+   },
+   {
+    "code": "B2.9",
+    "title": "Adjusting the chair: height, recline, lock, footrest"
+   },
+   {
+    "code": "B2.10",
+    "title": "Cleaning mirrors, counters and sinks"
+   },
+   {
+    "code": "B2.11",
+    "title": "Cord management: no tangles, no trip hazards"
+   },
+   {
+    "code": "B2.12",
+    "title": "Laundry: towels, capes, neck strips"
+   },
+   {
+    "code": "B2.13",
+    "title": "Opening checklist"
+   },
+   {
+    "code": "B2.14",
+    "title": "Closing checklist"
+   },
+   {
+    "code": "B2.15",
+    "title": "Weekly deep clean of the shop"
+   },
+   {
+    "code": "B2.16",
+    "title": "Restocking supplies and tracking inventory"
+   },
+   {
+    "code": "B2.17",
+    "title": "Lighting your station so you can see every hair"
+   },
+   {
+    "code": "B2.18",
+    "title": "Home or mobile setup for practicing"
+   }
+  ]
+ },
+ {
+  "code": "B3",
+  "title": "Sanitation, hygiene and safety",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B3.1",
+    "title": "Cleaning vs. sanitizing vs. disinfecting"
+   },
+   {
+    "code": "B3.2",
+    "title": "Hand washing and gloves"
+   },
+   {
+    "code": "B3.3",
+    "title": "Barbicide jar: mixing, soaking time, when to change it"
+   },
+   {
+    "code": "B3.4",
+    "title": "Disinfectant sprays (like Clippercide): what they do and don't do"
+   },
+   {
+    "code": "B3.5",
+    "title": "70% alcohol and when to use it"
+   },
+   {
+    "code": "B3.6",
+    "title": "Bleach and water mix for surfaces"
+   },
+   {
+    "code": "B3.7",
+    "title": "Single-use items: neck strips, razor blades, what gets tossed"
+   },
+   {
+    "code": "B3.8",
+    "title": "Disposing of razor blades safely (sharps container)"
+   },
+   {
+    "code": "B3.9",
+    "title": "Dirty vs. clean tool zones on your station"
+   },
+   {
+    "code": "B3.10",
+    "title": "Skin conditions to recognize and when to refuse a service"
+   },
+   {
+    "code": "B3.11",
+    "title": "Lice, ringworm and folliculitis: what to look for, what to do"
+   },
+   {
+    "code": "B3.12",
+    "title": "Cuts and nicks: first aid and blood spill procedure"
+   },
+   {
+    "code": "B3.13",
+    "title": "Reading product labels and safety data sheets"
+   },
+   {
+    "code": "B3.14",
+    "title": "Your own hygiene: breath, hands, clothes, scent"
+   },
+   {
+    "code": "B3.15",
+    "title": "Posture and protecting your back, wrists and feet"
+   },
+   {
+    "code": "B3.16",
+    "title": "Electrical safety around water"
+   },
+   {
+    "code": "B3.17",
+    "title": "What inspectors check"
+   }
+  ]
+ },
+ {
+  "code": "B4",
+  "title": "Know your tools: use, clean, maintain",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B4.1",
+    "title": "Tool overview: everything on a barber's station"
+   },
+   {
+    "code": "B4.2",
+    "title": "Clippers: rotary vs. magnetic vs. pivot motors"
+   },
+   {
+    "code": "B4.3",
+    "title": "Corded vs. cordless, batteries and charging habits"
+   },
+   {
+    "code": "B4.4",
+    "title": "Clipper blades: taper lever, open and closed"
+   },
+   {
+    "code": "B4.5",
+    "title": "Guards: numbers, sizes, half guards"
+   },
+   {
+    "code": "B4.6",
+    "title": "Trimmers and liners: when to use which"
+   },
+   {
+    "code": "B4.7",
+    "title": "Shavers and foil shavers"
+   },
+   {
+    "code": "B4.8",
+    "title": "Shears: parts of the scissor"
+   },
+   {
+    "code": "B4.9",
+    "title": "Shear types: straight, thinning, texturizing, blending, length"
+   },
+   {
+    "code": "B4.10",
+    "title": "Combs: cutting, wide tooth, tapering, fade comb, pik"
+   },
+   {
+    "code": "B4.11",
+    "title": "Brushes: neck duster, fade brush, boar, vent, round, edge brush"
+   },
+   {
+    "code": "B4.12",
+    "title": "Straight razors vs. shavette"
+   },
+   {
+    "code": "B4.13",
+    "title": "Spray bottles, clips and sectioning tools"
+   },
+   {
+    "code": "B4.14",
+    "title": "Capes, neck strips and towels"
+   },
+   {
+    "code": "B4.15",
+    "title": "Hair dryers and diffusers"
+   },
+   {
+    "code": "B4.16",
+    "title": "Daily clipper cleaning: brush, spray, oil"
+   },
+   {
+    "code": "B4.17",
+    "title": "Oiling your clippers: where and how many drops"
+   },
+   {
+    "code": "B4.18",
+    "title": "Taking the blade off and cleaning underneath"
+   },
+   {
+    "code": "B4.19",
+    "title": "Zeroing a blade and setting it safely"
+   },
+   {
+    "code": "B4.20",
+    "title": "Fixing a blade that pulls or snags"
+   },
+   {
+    "code": "B4.21",
+    "title": "Adjusting clipper power and tension screw"
+   },
+   {
+    "code": "B4.22",
+    "title": "Swapping in new blades; when a blade is done"
+   },
+   {
+    "code": "B4.23",
+    "title": "Trimmer gapping: making it sharp but safe"
+   },
+   {
+    "code": "B4.24",
+    "title": "Cleaning and oiling shears"
+   },
+   {
+    "code": "B4.25",
+    "title": "Adjusting shear tension"
+   },
+   {
+    "code": "B4.26",
+    "title": "Storing shears and avoiding drops"
+   },
+   {
+    "code": "B4.27",
+    "title": "When and where to get shears sharpened"
+   },
+   {
+    "code": "B4.28",
+    "title": "Changing a shavette blade safely"
+   },
+   {
+    "code": "B4.29",
+    "title": "Cleaning combs and brushes"
+   },
+   {
+    "code": "B4.30",
+    "title": "Caring for guards: cleaning, cracks, replacing"
+   },
+   {
+    "code": "B4.31",
+    "title": "Charging stations, cords and battery care"
+   },
+   {
+    "code": "B4.32",
+    "title": "Packing a travel or house-call kit"
+   }
+  ]
+ },
+ {
+  "code": "B5",
+  "title": "Holding and moving your tools",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B5.1",
+    "title": "How to hold your clippers and comb (free lesson pick)"
+   },
+   {
+    "code": "B5.2",
+    "title": "Clipper grips: overhand, underhand, pencil grip"
+   },
+   {
+    "code": "B5.3",
+    "title": "Moving the clipper: flicking out vs. straight passes"
+   },
+   {
+    "code": "B5.4",
+    "title": "Using the taper lever while cutting"
+   },
+   {
+    "code": "B5.5",
+    "title": "How to hold shears: thumb, ring finger, pinky rest"
+   },
+   {
+    "code": "B5.6",
+    "title": "Opening and closing shears: moving only the thumb"
+   },
+   {
+    "code": "B5.7",
+    "title": "Palming shears while you comb"
+   },
+   {
+    "code": "B5.8",
+    "title": "Holding the comb and passing it between hands"
+   },
+   {
+    "code": "B5.9",
+    "title": "Shear and comb drills without hair"
+   },
+   {
+    "code": "B5.10",
+    "title": "How to hold a trimmer for line work"
+   },
+   {
+    "code": "B5.11",
+    "title": "How to hold a straight razor: freehand and backhand"
+   },
+   {
+    "code": "B5.12",
+    "title": "Holding a client's head: gentle control and angles"
+   },
+   {
+    "code": "B5.13",
+    "title": "Your body position: standing, stance, moving around the chair"
+   },
+   {
+    "code": "B5.14",
+    "title": "Hand fatigue: stretches and grip tips"
+   },
+   {
+    "code": "B5.15",
+    "title": "Left-handed barbers: adjusting everything"
+   }
+  ]
+ },
+ {
+  "code": "B6",
+  "title": "Hair and head theory",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B6.1",
+    "title": "Hair basics: structure, growth, density, texture"
+   },
+   {
+    "code": "B6.2",
+    "title": "Hair types: straight, wavy, curly, coily"
+   },
+   {
+    "code": "B6.3",
+    "title": "Cowlicks, whorls and growth patterns"
+   },
+   {
+    "code": "B6.4",
+    "title": "Head shape: crown, occipital bone, parietal ridge"
+   },
+   {
+    "code": "B6.5",
+    "title": "Sections of the head: top, sides, back, nape"
+   },
+   {
+    "code": "B6.6",
+    "title": "Face shapes and what suits them"
+   },
+   {
+    "code": "B6.7",
+    "title": "Terminology part 1: taper, fade, blend, guideline"
+   },
+   {
+    "code": "B6.8",
+    "title": "Terminology part 2: elevation, over-direction, weight line"
+   },
+   {
+    "code": "B6.9",
+    "title": "Elevation angles: 0, 45 and 90 degrees"
+   },
+   {
+    "code": "B6.10",
+    "title": "Guidelines: stationary and traveling"
+   },
+   {
+    "code": "B6.11",
+    "title": "Graduation vs. layering"
+   },
+   {
+    "code": "B6.12",
+    "title": "Wet vs. dry cutting"
+   }
+  ]
+ },
+ {
+  "code": "B7",
+  "title": "Client basics",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B7.1",
+    "title": "Greeting a client and walking them to the chair"
+   },
+   {
+    "code": "B7.2",
+    "title": "The consultation: questions to ask every time"
+   },
+   {
+    "code": "B7.3",
+    "title": "Reading reference photos and managing expectations"
+   },
+   {
+    "code": "B7.4",
+    "title": "Draping: cape, neck strip, towel"
+   },
+   {
+    "code": "B7.5",
+    "title": "Shampooing at the bowl"
+   },
+   {
+    "code": "B7.6",
+    "title": "Towel drying and prepping hair for the cut"
+   },
+   {
+    "code": "B7.7",
+    "title": "Small talk: what to say and what to avoid"
+   },
+   {
+    "code": "B7.8",
+    "title": "Showing the client the back with a hand mirror"
+   },
+   {
+    "code": "B7.9",
+    "title": "Cleaning the client up: neck dusting, removing the cape"
+   },
+   {
+    "code": "B7.10",
+    "title": "Kids' first haircut and nervous clients"
+   },
+   {
+    "code": "B7.11",
+    "title": "Clients with sensory needs or disabilities"
+   }
+  ]
+ },
+ {
+  "code": "B8",
+  "title": "First skills on hair",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B8.1",
+    "title": "Clipper over guard: one length all over"
+   },
+   {
+    "code": "B8.2",
+    "title": "Cutting with the grain vs. against the grain"
+   },
+   {
+    "code": "B8.3",
+    "title": "Clipper over comb basics"
+   },
+   {
+    "code": "B8.4",
+    "title": "Shear over comb basics"
+   },
+   {
+    "code": "B8.5",
+    "title": "Finger and shear: cutting the top"
+   },
+   {
+    "code": "B8.6",
+    "title": "Lining up the hairline: front"
+   },
+   {
+    "code": "B8.7",
+    "title": "Around the ears"
+   },
+   {
+    "code": "B8.8",
+    "title": "Squared vs. tapered vs. rounded neckline"
+   },
+   {
+    "code": "B8.9",
+    "title": "Sideburns: matching both sides"
+   },
+   {
+    "code": "B8.10",
+    "title": "Checking balance in the mirror"
+   },
+   {
+    "code": "B8.11",
+    "title": "Blow drying a short haircut"
+   },
+   {
+    "code": "B8.12",
+    "title": "Applying product: pomade, clay, cream, gel"
+   }
+  ]
+ },
+ {
+  "code": "B9",
+  "title": "First full haircuts",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B9.1",
+    "title": "Your first clean taper, start to finish (free lesson pick)"
+   },
+   {
+    "code": "B9.2",
+    "title": "Buzz cut"
+   },
+   {
+    "code": "B9.3",
+    "title": "Even all over with scissors"
+   },
+   {
+    "code": "B9.4",
+    "title": "Classic short back and sides"
+   },
+   {
+    "code": "B9.5",
+    "title": "Basic crew cut"
+   },
+   {
+    "code": "B9.6",
+    "title": "Basic crop"
+   },
+   {
+    "code": "B9.7",
+    "title": "Ivy league"
+   },
+   {
+    "code": "B9.8",
+    "title": "Simple kids' cut"
+   }
+  ]
+ },
+ {
+  "code": "B10",
+  "title": "Practice and progress",
+  "level": "beginner",
+  "lessons": [
+   {
+    "code": "B10.1",
+    "title": "Mannequin head setup and how to use it"
+   },
+   {
+    "code": "B10.2",
+    "title": "Daily 15 minute practice drills"
+   },
+   {
+    "code": "B10.3",
+    "title": "Filming your own cuts to review them"
+   },
+   {
+    "code": "B10.4",
+    "title": "Common beginner mistakes and how to fix them"
+   },
+   {
+    "code": "B10.5",
+    "title": "Beginner level test: what you should be able to do"
+   }
+  ]
+ },
+ {
+  "code": "I1",
+  "title": "Fades",
+  "level": "intermediate",
+  "lessons": [
+   {
+    "code": "I1.1",
+    "title": "Fade theory: low, mid, high, and where the line sits"
+   },
+   {
+    "code": "I1.2",
+    "title": "Mapping guide lines before you start"
+   },
+   {
+    "code": "I1.3",
+    "title": "Blending out the line: the low skin fade"
+   },
+   {
+    "code": "I1.4",
+    "title": "Mid skin fade"
+   },
+   {
+    "code": "I1.5",
+    "title": "High skin fade"
+   },
+   {
+    "code": "I1.6",
+    "title": "Drop fade"
+   },
+   {
+    "code": "I1.7",
+    "title": "Burst fade"
+   },
+   {
+    "code": "I1.8",
+    "title": "Temple fade (temp fade)"
+   },
+   {
+    "code": "I1.9",
+    "title": "Shadow fade (no skin)"
+   },
+   {
+    "code": "I1.10",
+    "title": "Bald fade with a foil shaver"
+   },
+   {
+    "code": "I1.11",
+    "title": "Fade on straight hair vs. coily hair"
+   },
+   {
+    "code": "I1.12",
+    "title": "Using guards and lever to blend: step by step"
+   },
+   {
+    "code": "I1.13",
+    "title": "Fixing dark lines, holes and steps"
+   },
+   {
+    "code": "I1.14",
+    "title": "Blending the fade into the top"
+   },
+   {
+    "code": "I1.15",
+    "title": "Fades on cowlicks and bumpy heads"
+   },
+   {
+    "code": "I1.16",
+    "title": "Checking a fade in different lighting"
+   }
+  ]
+ },
+ {
+  "code": "I2",
+  "title": "Tapers",
+  "level": "intermediate",
+  "lessons": [
+   {
+    "code": "I2.1",
+    "title": "Low taper"
+   },
+   {
+    "code": "I2.2",
+    "title": "Classic scissor taper"
+   },
+   {
+    "code": "I2.3",
+    "title": "Taper on curly hair"
+   },
+   {
+    "code": "I2.4",
+    "title": "Neck taper vs. blocked neckline"
+   }
+  ]
+ },
+ {
+  "code": "I3",
+  "title": "Scissor work",
+  "level": "intermediate",
+  "lessons": [
+   {
+    "code": "I3.1",
+    "title": "Point cutting"
+   },
+   {
+    "code": "I3.2",
+    "title": "Slide cutting"
+   },
+   {
+    "code": "I3.3",
+    "title": "Thinning shears: where and how much"
+   },
+   {
+    "code": "I3.4",
+    "title": "Texturizing the top"
+   },
+   {
+    "code": "I3.5",
+    "title": "Scissor over comb on the sides, no clippers"
+   },
+   {
+    "code": "I3.6",
+    "title": "Layering medium length hair"
+   },
+   {
+    "code": "I3.7",
+    "title": "Cross checking a scissor cut"
+   },
+   {
+    "code": "I3.8",
+    "title": "Removing weight lines and corners"
+   },
+   {
+    "code": "I3.9",
+    "title": "Dry cutting curly hair, curl by curl"
+   },
+   {
+    "code": "I3.10",
+    "title": "Cutting with a razor"
+   }
+  ]
+ },
+ {
+  "code": "I4",
+  "title": "Popular haircuts, full start to finish",
+  "level": "intermediate",
+  "lessons": [
+   {
+    "code": "I4.1",
+    "title": "Textured crop with skin fade"
+   },
+   {
+    "code": "I4.2",
+    "title": "French crop"
+   },
+   {
+    "code": "I4.3",
+    "title": "Quiff"
+   },
+   {
+    "code": "I4.4",
+    "title": "Pompadour"
+   },
+   {
+    "code": "I4.5",
+    "title": "Side part with hard part"
+   },
+   {
+    "code": "I4.6",
+    "title": "Comb over"
+   },
+   {
+    "code": "I4.7",
+    "title": "Slick back"
+   },
+   {
+    "code": "I4.8",
+    "title": "Undercut"
+   },
+   {
+    "code": "I4.9",
+    "title": "Fringe / curtains"
+   },
+   {
+    "code": "I4.10",
+    "title": "Taper fade with curly top"
+   },
+   {
+    "code": "I4.11",
+    "title": "Mid length restyle"
+   },
+   {
+    "code": "I4.12",
+    "title": "Mullet (modern)"
+   },
+   {
+    "code": "I4.13",
+    "title": "Caesar cut"
+   },
+   {
+    "code": "I4.14",
+    "title": "Flat top basics"
+   },
+   {
+    "code": "I4.15",
+    "title": "Long hair trim for men"
+   },
+   {
+    "code": "I4.16",
+    "title": "Short cuts for women (pixie, undercut)"
+   },
+   {
+    "code": "I4.17",
+    "title": "Older clients and thinning hair"
+   },
+   {
+    "code": "I4.18",
+    "title": "Covering bald spots and receding lines"
+   }
+  ]
+ },
+ {
+  "code": "I5",
+  "title": "Textured and coily hair",
+  "level": "intermediate",
+  "lessons": [
+   {
+    "code": "I5.1",
+    "title": "Understanding afro textured hair"
+   },
+   {
+    "code": "I5.2",
+    "title": "Picking out and shaping"
+   },
+   {
+    "code": "I5.3",
+    "title": "Sponge twists"
+   },
+   {
+    "code": "I5.4",
+    "title": "Taper and shape-up on coily hair"
+   },
+   {
+    "code": "I5.5",
+    "title": "Afro shaping with shears"
+   },
+   {
+    "code": "I5.6",
+    "title": "Waves: brushing and cutting for 360 waves"
+   },
+   {
+    "code": "I5.7",
+    "title": "Cutting around locs and twists"
+   },
+   {
+    "code": "I5.8",
+    "title": "Razor bumps and ingrown hairs on the neck"
+   }
+  ]
+ },
+ {
+  "code": "I6",
+  "title": "Line-ups and edges",
+  "level": "intermediate",
+  "lessons": [
+   {
+    "code": "I6.1",
+    "title": "Crisp line-up with a trimmer"
+   },
+   {
+    "code": "I6.2",
+    "title": "Line-up with a razor"
+   },
+   {
+    "code": "I6.3",
+    "title": "Natural hairline vs. pushed-back line"
+   },
+   {
+    "code": "I6.4",
+    "title": "Matching a receding hairline"
+   },
+   {
+    "code": "I6.5",
+    "title": "Squaring the temples"
+   },
+   {
+    "code": "I6.6",
+    "title": "Hard part with trimmer and razor"
+   },
+   {
+    "code": "I6.7",
+    "title": "Fixing an uneven line-up"
+   }
+  ]
+ },
+ {
+  "code": "I7",
+  "title": "Beards",
+  "level": "intermediate",
+  "lessons": [
+   {
+    "code": "I7.1",
+    "title": "Beard consult: shape, face, growth"
+   },
+   {
+    "code": "I7.2",
+    "title": "Beard trim with clippers and guards"
+   },
+   {
+    "code": "I7.3",
+    "title": "Beard shaping with scissors"
+   },
+   {
+    "code": "I7.4",
+    "title": "Cheek line and neckline placement"
+   },
+   {
+    "code": "I7.5",
+    "title": "Beard fade into the sideburn"
+   },
+   {
+    "code": "I7.6",
+    "title": "Moustache trim and shaping"
+   },
+   {
+    "code": "I7.7",
+    "title": "Goatee and short boxed beard"
+   },
+   {
+    "code": "I7.8",
+    "title": "Long beard grooming"
+   },
+   {
+    "code": "I7.9",
+    "title": "Patchy beards: making them look full"
+   },
+   {
+    "code": "I7.10",
+    "title": "Beard oils, balms, butters"
+   },
+   {
+    "code": "I7.11",
+    "title": "Beard enhancement basics (fiber, color)"
+   }
+  ]
+ },
+ {
+  "code": "I8",
+  "title": "Shaves and facials",
+  "level": "intermediate",
+  "lessons": [
+   {
+    "code": "I8.1",
+    "title": "Prepping skin for a shave"
+   },
+   {
+    "code": "I8.2",
+    "title": "Hot towel routine"
+   },
+   {
+    "code": "I8.3",
+    "title": "Lathering with a brush"
+   },
+   {
+    "code": "I8.4",
+    "title": "Straight razor angles and stretching skin"
+   },
+   {
+    "code": "I8.5",
+    "title": "First pass with the grain, second pass across"
+   },
+   {
+    "code": "I8.6",
+    "title": "Head shave"
+   },
+   {
+    "code": "I8.7",
+    "title": "Neck shave after a haircut"
+   },
+   {
+    "code": "I8.8",
+    "title": "Aftershave, alum, and calming the skin"
+   },
+   {
+    "code": "I8.9",
+    "title": "Treating nicks during a shave"
+   },
+   {
+    "code": "I8.10",
+    "title": "Simple facial massage"
+   },
+   {
+    "code": "I8.11",
+    "title": "Nose, ear and eyebrow tidy-up"
+   }
+  ]
+ },
+ {
+  "code": "I9",
+  "title": "Working with real clients",
+  "level": "intermediate",
+  "lessons": [
+   {
+    "code": "I9.1",
+    "title": "Timing: getting a cut under 30 to 45 minutes"
+   },
+   {
+    "code": "I9.2",
+    "title": "What to say when the client wants something that won't work"
+   },
+   {
+    "code": "I9.3",
+    "title": "Handling an unhappy client"
+   },
+   {
+    "code": "I9.4",
+    "title": "Fixing someone else's bad haircut"
+   },
+   {
+    "code": "I9.5",
+    "title": "Recommending products without being pushy"
+   },
+   {
+    "code": "I9.6",
+    "title": "Rebooking the client before they leave"
+   },
+   {
+    "code": "I9.7",
+    "title": "Taking great photos of your work"
+   },
+   {
+    "code": "I9.8",
+    "title": "Intermediate level test"
+   }
+  ]
+ },
+ {
+  "code": "A1",
+  "title": "Precision and speed",
+  "level": "advanced",
+  "lessons": [
+   {
+    "code": "A1.1",
+    "title": "Seamless blending at skin level: zero gap work"
+   },
+   {
+    "code": "A1.2",
+    "title": "The 15 minute fade without losing quality"
+   },
+   {
+    "code": "A1.3",
+    "title": "Freehand fades with no guards"
+   },
+   {
+    "code": "A1.4",
+    "title": "Clipper over comb fades"
+   },
+   {
+    "code": "A1.5",
+    "title": "Advanced blending with the lever only"
+   },
+   {
+    "code": "A1.6",
+    "title": "Detailing: finishing work that sets you apart"
+   },
+   {
+    "code": "A1.7",
+    "title": "Reading the head shape and cutting to correct it"
+   },
+   {
+    "code": "A1.8",
+    "title": "Asymmetrical cuts"
+   }
+  ]
+ },
+ {
+  "code": "A2",
+  "title": "Advanced haircuts",
+  "level": "advanced",
+  "lessons": [
+   {
+    "code": "A2.1",
+    "title": "Flat top, fully squared"
+   },
+   {
+    "code": "A2.2",
+    "title": "High top / box fade"
+   },
+   {
+    "code": "A2.3",
+    "title": "Gumby / sculpted top"
+   },
+   {
+    "code": "A2.4",
+    "title": "Mohawk and faux hawk"
+   },
+   {
+    "code": "A2.5",
+    "title": "Modern mullet with burst fade"
+   },
+   {
+    "code": "A2.6",
+    "title": "Edgar / Takuache cut"
+   },
+   {
+    "code": "A2.7",
+    "title": "Two-block (K-style) cut"
+   },
+   {
+    "code": "A2.8",
+    "title": "Long layered men's hair"
+   },
+   {
+    "code": "A2.9",
+    "title": "Heavy texture with razor"
+   },
+   {
+    "code": "A2.10",
+    "title": "Pompadour with fade and hard part"
+   },
+   {
+    "code": "A2.11",
+    "title": "Classic 1950s barbering styles"
+   },
+   {
+    "code": "A2.12",
+    "title": "Military and regulation cuts"
+   }
+  ]
+ },
+ {
+  "code": "A3",
+  "title": "Hair designs and art",
+  "level": "advanced",
+  "lessons": [
+   {
+    "code": "A3.1",
+    "title": "Design basics: tools, planning, sketching"
+   },
+   {
+    "code": "A3.2",
+    "title": "Straight lines and simple parts"
+   },
+   {
+    "code": "A3.3",
+    "title": "Curved lines and waves"
+   },
+   {
+    "code": "A3.4",
+    "title": "Geometric patterns"
+   },
+   {
+    "code": "A3.5",
+    "title": "Logos and lettering"
+   },
+   {
+    "code": "A3.6",
+    "title": "Freestyle designs"
+   },
+   {
+    "code": "A3.7",
+    "title": "Adding shading and depth"
+   },
+   {
+    "code": "A3.8",
+    "title": "Color in designs (hair pencils, spray)"
+   },
+   {
+    "code": "A3.9",
+    "title": "Portrait hair art"
+   }
+  ]
+ },
+ {
+  "code": "A4",
+  "title": "Color and chemical services",
+  "level": "advanced",
+  "lessons": [
+   {
+    "code": "A4.1",
+    "title": "Color theory for barbers"
+   },
+   {
+    "code": "A4.2",
+    "title": "Patch and strand testing"
+   },
+   {
+    "code": "A4.3",
+    "title": "Grey blending and camouflage color"
+   },
+   {
+    "code": "A4.4",
+    "title": "Beard color"
+   },
+   {
+    "code": "A4.5",
+    "title": "Full bleach and platinum"
+   },
+   {
+    "code": "A4.6",
+    "title": "Fashion colors (pink, yellow, blue)"
+   },
+   {
+    "code": "A4.7",
+    "title": "Enhancements: hairline and beard fill"
+   },
+   {
+    "code": "A4.8",
+    "title": "Perms for men / texture perms"
+   },
+   {
+    "code": "A4.9",
+    "title": "Relaxers and texturizers on short hair"
+   },
+   {
+    "code": "A4.10",
+    "title": "Keratin and straightening"
+   },
+   {
+    "code": "A4.11",
+    "title": "Curl sponges vs. chemical curl options"
+   }
+  ]
+ },
+ {
+  "code": "A5",
+  "title": "Hair systems and special cases",
+  "level": "advanced",
+  "lessons": [
+   {
+    "code": "A5.1",
+    "title": "Hair loss: patterns and talking about it kindly"
+   },
+   {
+    "code": "A5.2",
+    "title": "Hair system (toupee) fitting and cutting in"
+   },
+   {
+    "code": "A5.3",
+    "title": "Scalp micropigmentation clients: cutting around SMP"
+   },
+   {
+    "code": "A5.4",
+    "title": "Medical patients and scars"
+   },
+   {
+    "code": "A5.5",
+    "title": "Alopecia and chemo clients"
+   }
+  ]
+ },
+ {
+  "code": "A6",
+  "title": "Competition and editorial",
+  "level": "advanced",
+  "lessons": [
+   {
+    "code": "A6.1",
+    "title": "Preparing a cut for competition"
+   },
+   {
+    "code": "A6.2",
+    "title": "Photoshoot styling"
+   },
+   {
+    "code": "A6.3",
+    "title": "Session and backstage barbering"
+   }
+  ]
+ },
+ {
+  "code": "A7",
+  "title": "Business of barbering",
+  "level": "advanced",
+  "lessons": [
+   {
+    "code": "A7.1",
+    "title": "Booth rent vs. commission vs. owning a shop"
+   },
+   {
+    "code": "A7.2",
+    "title": "Setting your prices"
+   },
+   {
+    "code": "A7.3",
+    "title": "Booking apps and no-show policies"
+   },
+   {
+    "code": "A7.4",
+    "title": "Building a client base from zero"
+   },
+   {
+    "code": "A7.5",
+    "title": "Instagram and TikTok for barbers"
+   },
+   {
+    "code": "A7.6",
+    "title": "Filming your work for social media"
+   },
+   {
+    "code": "A7.7",
+    "title": "Taxes, expenses and saving for slow months"
+   },
+   {
+    "code": "A7.8",
+    "title": "Selling retail products"
+   },
+   {
+    "code": "A7.9",
+    "title": "House calls and event work"
+   },
+   {
+    "code": "A7.10",
+    "title": "Hiring and training barbers"
+   },
+   {
+    "code": "A7.11",
+    "title": "Opening your own shop: what we learned at Society Barbers"
+   },
+   {
+    "code": "A7.12",
+    "title": "Shop culture and keeping a team together"
+   },
+   {
+    "code": "A7.13",
+    "title": "Handling burnout and long-term health"
+   }
+  ]
+ },
+ {
+  "code": "A8",
+  "title": "Teaching and mastery",
+  "level": "advanced",
+  "lessons": [
+   {
+    "code": "A8.1",
+    "title": "How to teach an apprentice"
+   },
+   {
+    "code": "A8.2",
+    "title": "Critiquing your own work"
+   },
+   {
+    "code": "A8.3",
+    "title": "Building a signature style"
+   },
+   {
+    "code": "A8.4",
+    "title": "Advanced level test and certificate"
+   }
+  ]
+ },
+ {
+  "code": "X1",
+  "title": "Watch along (full real-client cuts, no cuts in the edit)",
+  "level": "bonus",
+  "lessons": [
+   {
+    "code": "X1.1",
+    "title": "Saturday rush: three cuts back to back"
+   },
+   {
+    "code": "X1.2",
+    "title": "Transformation: long hair to skin fade"
+   },
+   {
+    "code": "X1.3",
+    "title": "Kid who hates haircuts"
+   },
+   {
+    "code": "X1.4",
+    "title": "Coily hair full service with beard"
+   },
+   {
+    "code": "X1.5",
+    "title": "Gentleman's full service: cut, shave, hot towel"
+   }
+  ]
+ },
+ {
+  "code": "X2",
+  "title": "Fix it (short troubleshooting videos)",
+  "level": "bonus",
+  "lessons": [
+   {
+    "code": "X2.1",
+    "title": "\"I took too much off the top\""
+   },
+   {
+    "code": "X2.2",
+    "title": "Uneven sideburns"
+   },
+   {
+    "code": "X2.3",
+    "title": "Line-up pushed back too far"
+   },
+   {
+    "code": "X2.4",
+    "title": "Clipper won't cut / runs hot"
+   },
+   {
+    "code": "X2.5",
+    "title": "Shears folding hair instead of cutting"
+   },
+   {
+    "code": "X2.6",
+    "title": "Client got a nick"
+   }
+  ]
+ },
+ {
+  "code": "X3",
+  "title": "Gear reviews and comparisons",
+  "level": "bonus",
+  "lessons": [
+   {
+    "code": "X3.1",
+    "title": "Best clippers at every budget"
+   },
+   {
+    "code": "X3.2",
+    "title": "Best trimmers and shavers"
+   },
+   {
+    "code": "X3.3",
+    "title": "Shears worth the money"
+   },
+   {
+    "code": "X3.4",
+    "title": "Products we actually use at Society Barbers"
+   },
+   {
+    "code": "X3.5",
+    "title": "Unboxing and setting up new clippers"
+   }
+  ]
+ },
+ {
+  "code": "X4",
+  "title": "Shop life and quick tips",
+  "level": "bonus",
+  "lessons": [
+   {
+    "code": "X4.1",
+    "title": "Day in the life at Society Barbers"
+   },
+   {
+    "code": "X4.2",
+    "title": "Ask a barber: member questions (monthly)"
+   },
+   {
+    "code": "X4.3",
+    "title": "Two minute tip series (one tip per video)"
+   },
+   {
+    "code": "X4.4",
+    "title": "Barbering history and traditions"
+   },
+   {
+    "code": "X4.5",
+    "title": "Breakdown of a viral haircut trend"
+   },
+   {
+    "code": "X4.6",
+    "title": "Partner vs. partner: same cut, two styles"
+   },
+   {
+    "code": "X4.7",
+    "title": "Mistakes we made starting out"
+   },
+   {
+    "code": "X4.8",
+    "title": "Interview a guest barber"
+   },
+   {
+    "code": "X4.9",
+    "title": "How to talk to clients about mental health and wellbeing"
+   }
+  ]
+ }
+]
