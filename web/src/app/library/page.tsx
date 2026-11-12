@@ -12,9 +12,9 @@ export default async function Library({ searchParams }: { searchParams: Promise<
   const q = await searchParams;
   const v = await getViewer();
   const done = await getCompleted(v);
-  const videos = await getVideos(LESSONS.filter((l) => canWatch(v.tier, l)).map((l) => l.code));
+  const videos = await getVideos(LESSONS.filter((l) => canWatch(v, l)).map((l) => l.code));
   const ready = new Set(videos.keys());
-  const firstOpen = LESSONS.find((l) => canWatch(v.tier, l) && !done.has(l.code));
+  const firstOpen = LESSONS.find((l) => canWatch(v, l) && !done.has(l.code));
 
   return (
     <div className="wrap">
@@ -31,7 +31,7 @@ export default async function Library({ searchParams }: { searchParams: Promise<
         <h1 className="display">All <em>lessons</em></h1>
         <p className="lede">
           {v.signedIn
-            ? `${LESSONS.filter((l) => canWatch(v.tier, l)).length} of ${LESSONS.length} lessons unlocked on your plan. You've finished ${done.size}.`
+            ? `${LESSONS.filter((l) => canWatch(v, l)).length} of ${LESSONS.length} lessons unlocked on your plan. You've finished ${done.size}.`
             : "Browse everything. Make a free account to watch the starter lessons, or join a plan to unlock a full course."}
         </p>
         <div className="ctas">
@@ -44,7 +44,7 @@ export default async function Library({ searchParams }: { searchParams: Promise<
       <nav className="level-nav" aria-label="Levels">
         {LEVELS.map((l) => (
           <a key={l.id} href={`#${l.id}`}>
-            {tierRank(v.tier) < tierRank(l.tier) && <LockIcon />}
+            {(!v.signedIn || tierRank(v.tier) < tierRank(l.tier)) && <LockIcon />}
             {l.name}
           </a>
         ))}
@@ -52,7 +52,7 @@ export default async function Library({ searchParams }: { searchParams: Promise<
 
       {LEVELS.map((l) => {
         const lessons = lessonsIn(l.id);
-        const unlocked = tierRank(v.tier) >= tierRank(l.tier);
+        const unlocked = v.signedIn && tierRank(v.tier) >= tierRank(l.tier);
         const finished = lessons.filter((x) => done.has(x.code)).length;
         const needs = planFor(l.tier);
         return (
@@ -72,14 +72,14 @@ export default async function Library({ searchParams }: { searchParams: Promise<
                   <span className="pill y">Free</span>
                 )
               ) : (
-                <span className="pill p"><LockIcon /> {needs?.name}</span>
+                <span className="pill p"><LockIcon /> {l.tier === "free" ? "Free account" : needs?.name}</span>
               )}
             </div>
             {!unlocked && (
               <div className="locked-note">
                 <span className="small">
                   {l.tier === "free"
-                    ? "Make a free account to watch these."
+                    ? "Make a free account to watch these. No card needed."
                     : `Unlocks with ${needs!.name}, $${needs!.monthly} a month.`}
                 </span>
                 <Link className="btn pink sm" href={l.tier === "free" ? "/login?next=/library" : `/join?plan=${l.tier}`}>
@@ -95,7 +95,7 @@ export default async function Library({ searchParams }: { searchParams: Promise<
                     <span className="t">{m.title}</span>
                     <span className="n">{m.lessons.length}</span>
                   </summary>
-                  <LessonList lessons={m.lessons} tier={v.tier} done={done} ready={ready} demo={v.demo} />
+                  <LessonList lessons={m.lessons} tier={v.tier} signedIn={v.signedIn} done={done} ready={ready} demo={v.demo} />
                 </details>
               ))}
             </div>

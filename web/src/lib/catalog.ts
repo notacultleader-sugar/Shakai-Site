@@ -30,7 +30,9 @@ export const getLesson = (code: string) => byCode.get(code.toLowerCase());
 export const getModule = (code: string) => MODULES.find((m) => m.code === code);
 export const modulesIn = (level: LevelId) => MODULES.filter((m) => m.level === level);
 export const lessonsIn = (level: LevelId) => LESSONS.filter((l) => l.level === level);
-export const canWatch = (viewer: Tier, lesson: Lesson) => tierRank(viewer) >= tierRank(lesson.tier);
+// Every lesson, even a free one, needs an account. Paid lessons need a plan at or above the lesson's tier.
+export const canWatch = (viewer: { tier: Tier; signedIn: boolean }, lesson: Lesson) =>
+  viewer.signedIn && tierRank(viewer.tier) >= tierRank(lesson.tier);
 export const nextLesson = (l: Lesson) => LESSONS[l.index + 1];
 export const prevLesson = (l: Lesson) => (l.index > 0 ? LESSONS[l.index - 1] : undefined);
 export const slug = (code: string) => code.toLowerCase();

@@ -3,13 +3,13 @@ import { type Lesson, canWatch, slug } from "@/lib/catalog";
 import type { Tier } from "@/lib/plans";
 import { CheckIcon, LockIcon, PlayIcon } from "./icons";
 
-type Props = { lessons: Lesson[]; tier: Tier; done: Set<string>; ready: Set<string>; demo: boolean; current?: string };
+type Props = { lessons: Lesson[]; tier: Tier; signedIn: boolean; done: Set<string>; ready: Set<string>; demo: boolean; current?: string };
 
-export function LessonList({ lessons, tier, done, ready, demo, current }: Props) {
+export function LessonList({ lessons, tier, signedIn, done, ready, demo, current }: Props) {
   return (
     <ul className="lessons">
       {lessons.map((l) => {
-        const open = canWatch(tier, l);
+        const open = canWatch({ tier, signedIn }, l);
         const state = !open ? "lock" : done.has(l.code) ? "done" : "open";
         return (
           <li key={l.code} className={l.code === current ? "cur" : undefined}>

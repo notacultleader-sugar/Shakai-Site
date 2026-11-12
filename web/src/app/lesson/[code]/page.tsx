@@ -25,9 +25,9 @@ export default async function LessonPage({ params }: Params) {
   const level = LEVELS.find((x) => x.id === lesson.level)!;
   const info = lessonDetails(lesson);
   const v = await getViewer();
-  const open = canWatch(v.tier, lesson);
+  const open = canWatch(v, lesson);
   const done = await getCompleted(v);
-  const videos = await getVideos(open ? mod.lessons.filter((l) => canWatch(v.tier, l)).map((l) => l.code) : []);
+  const videos = await getVideos(open ? mod.lessons.filter((l) => canWatch(v, l)).map((l) => l.code) : []);
   const video = videos.get(lesson.code);
   const tokens = open && video ? await muxTokens(video.playbackId) : null;
   const playable = Boolean(open && video && tokens);
@@ -135,7 +135,7 @@ export default async function LessonPage({ params }: Params) {
             <span style={{ fontWeight: 600, flex: 1 }}>{mod.title}</span>
             <span className="small muted">{position} / {mod.lessons.length}</span>
           </div>
-          <LessonList lessons={mod.lessons} tier={v.tier} done={done} ready={new Set(videos.keys())} demo={v.demo} current={lesson.code} />
+          <LessonList lessons={mod.lessons} tier={v.tier} signedIn={v.signedIn} done={done} ready={new Set(videos.keys())} demo={v.demo} current={lesson.code} />
         </div>
       </div>
     </div>
