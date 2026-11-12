@@ -1,7 +1,7 @@
 {
   // Cloudflare Worker that serves the members site (built with OpenNext).
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "shakai-web",
+  "name": "shakai-site",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
