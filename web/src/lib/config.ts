@@ -1,6 +1,6 @@
 // Which services are connected. With nothing set, the site runs in demo mode.
 export const env = {
-  siteUrl: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, ""),
+  siteUrl: (process.env.NEXT_PUBLIC_SITE_URL || "https://shakaiacademy.com").replace(/\/$/, ""),
   supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL || "",
   supabaseAnonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "",
 };

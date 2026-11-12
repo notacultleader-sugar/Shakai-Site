@@ -1,11 +1,11 @@
-import { env, hasStripe } from "@/lib/config";
-import { go } from "@/lib/http";
+import { hasStripe } from "@/lib/config";
+import { go, originOf } from "@/lib/http";
 import { stripe } from "@/lib/stripe";
 import { supabaseAdmin } from "@/lib/supabase/server";
 import { getViewer } from "@/lib/viewer";
 
 // Stripe's billing portal: change plan, update card, cancel, download receipts.
-export async function POST() {
+export async function POST(req: Request) {
   const viewer = await getViewer();
   if (!viewer.signedIn) return go("/login?next=/account");
   if (viewer.demo || !hasStripe()) return go("/account");
@@ -15,7 +15,7 @@ export async function POST() {
 
   const session = await stripe().billingPortal.sessions.create({
     customer: data.stripe_customer_id,
-    return_url: `${env.siteUrl}/account`,
+    return_url: `${originOf(req)}/account`,
   });
   return go(session.url);
 }

@@ -1,11 +1,10 @@
 import { cookies } from "next/headers";
 import { hasStripe, isDemo } from "@/lib/config";
-import { go } from "@/lib/http";
+import { go, originOf } from "@/lib/http";
 import { type Interval, type PaidTier, lookupKey } from "@/lib/plans";
 import { stripe } from "@/lib/stripe";
 import { supabaseAdmin } from "@/lib/supabase/server";
 import { DEMO_COOKIE, getViewer } from "@/lib/viewer";
-import { env } from "@/lib/config";
 
 // POST from the pricing page: tier + interval. Sends the member to Stripe Checkout.
 export async function POST(req: Request) {
@@ -55,8 +54,8 @@ export async function POST(req: Request) {
     line_items: [{ price: price.id, quantity: 1 }],
     allow_promotion_codes: true,
     subscription_data: { metadata: { supabase_user_id: viewer.userId! } },
-    success_url: `${env.siteUrl}/library?welcome=1`,
-    cancel_url: `${env.siteUrl}/join`,
+    success_url: `${originOf(req)}/library?welcome=1`,
+    cancel_url: `${originOf(req)}/join`,
   });
   return go(session.url!);
 }

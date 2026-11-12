@@ -1,8 +1,9 @@
-import { NextResponse } from "next/server";
-import { env } from "./config";
+// 303 so a form POST lands on a normal page load. Relative paths stay on whatever
+// address the site is served from (preview link, workers.dev or the real domain).
+export const go = (path: string) => new Response(null, { status: 303, headers: { Location: path } });
 
-// 303 so a form POST lands on a normal page load.
-export const go = (path: string) => NextResponse.redirect(new URL(path, env.siteUrl), 303);
+// The address the request came in on, for links we hand to Stripe.
+export const originOf = (req: Request) => new URL(req.url).origin;
 
 // Only allow redirects back into this site.
 export const safeNext = (v: unknown, fallback = "/library") => {
