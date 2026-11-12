@@ -34,3 +34,30 @@ export const canWatch = (viewer: Tier, lesson: Lesson) => tierRank(viewer) >= ti
 export const nextLesson = (l: Lesson) => LESSONS[l.index + 1];
 export const prevLesson = (l: Lesson) => (l.index > 0 ? LESSONS[l.index - 1] : undefined);
 export const slug = (code: string) => code.toLowerCase();
+
+import details from "@/content/details.json";
+
+export type LessonDetails = {
+  minutes?: number;
+  description: string;
+  learn: string[];
+  tools: string[];
+  chapters: [number, string][];
+  sample: boolean; // true when written notes exist for this lesson
+};
+
+// Notes shown beside the video. Falls back to a short description built from the module.
+export function lessonDetails(l: Lesson): LessonDetails {
+  const d = (details as unknown as Record<string, Partial<LessonDetails>>)[l.code];
+  const mod = getModule(l.module)!;
+  if (d) return { description: "", learn: [], tools: [], chapters: [], ...d, sample: true };
+  return {
+    description: `${l.title}. Part of ${mod.code} ${mod.title}, lesson ${mod.lessons.indexOf(l) + 1} of ${mod.lessons.length}.`,
+    learn: [],
+    tools: [],
+    chapters: [],
+    sample: false,
+  };
+}
+
+export const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
