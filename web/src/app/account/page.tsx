@@ -14,7 +14,7 @@ export default async function Account({ searchParams }: { searchParams: Promise<
   const v = await getViewer();
   if (!v.signedIn) redirect("/login?next=/account");
   const done = await getCompleted(v);
-  const open = LESSONS.filter((l) => canWatch(v.tier, l)).length;
+  const open = LESSONS.filter((l) => canWatch(v, l)).length;
   const date = fmt(v.renewsAt);
 
   return (
