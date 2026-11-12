@@ -1,0 +1,31 @@
+{
+  "_note": "Sample lesson notes. Edit freely: minutes, description, learn, tools, chapters [seconds, label]. Lessons not listed here get a short automatic description.",
+  "F1.6": {
+    "minutes": 14,
+    "description": "Our free taster lesson. You'll learn how to hold your clippers and comb the way working barbers do, then watch a full, clean taper from start to finish on a real client. No experience needed.",
+    "learn": ["The two grips you'll use on almost every cut", "How to keep the comb and clipper working together", "Where a taper starts and how to blend it", "Cleaning up the neckline and around the ears"],
+    "tools": ["Clippers", "Guards #1 to #4", "Trimmer", "Cutting comb", "Neck duster"],
+    "chapters": [[0, "Welcome"], [45, "Holding your clippers"], [180, "Holding your comb"], [300, "Mapping the taper"], [450, "Blending up the sides"], [660, "Neckline and ears"], [780, "Final check"]]
+  },
+  "B5.1": {
+    "minutes": 9,
+    "description": "Everything starts with how you hold your tools. A good grip keeps your lines straight, saves your wrist, and makes every other lesson easier. We break down the clipper and comb grips we use every day at Society Barbers.",
+    "learn": ["Overhand and underhand clipper grips", "Where your thumb and fingers sit on the comb", "How to switch between tools without fumbling", "Common grip mistakes and how to fix them"],
+    "tools": ["Clippers", "Cutting comb"],
+    "chapters": [[0, "Why grip matters"], [60, "Overhand grip"], [170, "Underhand grip"], [270, "Holding the comb"], [380, "Switching tools"], [470, "Common mistakes"]]
+  },
+  "B9.1": {
+    "minutes": 24,
+    "description": "Your first full haircut, filmed start to finish. We walk through a clean, classic taper on a real client, explaining every guard change and every pass.",
+    "learn": ["Consultation and setting up the chair", "Mapping a low taper", "Blending with guards and the lever", "Finishing the top and the neckline"],
+    "tools": ["Clippers", "Guards #1 to #4", "Trimmer", "Shears", "Cutting comb", "Neck duster"],
+    "chapters": [[0, "Consultation"], [120, "Mapping the taper"], [360, "First guard pass"], [600, "Blending"], [900, "The top"], [1200, "Neckline and finish"]]
+  },
+  "I1.3": {
+    "minutes": 18,
+    "description": "The low skin fade is the cut clients ask for most. We show how to set the line low, take it to skin, and blend it so there are no dark lines, step by step on a real client.",
+    "learn": ["Placing a low guide line that suits the head shape", "Taking the bottom to skin with a foil shaver", "Blending with the lever and open guard", "Spotting and fixing dark lines"],
+    "tools": ["Clippers", "Guards #0.5 to #2", "Trimmer", "Foil shaver", "Cutting comb"],
+    "chapters": [[0, "What makes a low fade"], [90, "Setting the guide line"], [270, "Going to skin"], [480, "Blending the line"], [780, "Cleaning dark spots"], [960, "Final check"]]
+  }
+}
