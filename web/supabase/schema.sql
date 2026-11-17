@@ -33,14 +33,35 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created after insert on auth.users
   for each row execute function public.handle_new_user();
 
--- Which Mux video belongs to which lesson. Add a row when a video is ready:
--- lesson_code like 'B5.1', mux_playback_id from the Mux asset page.
+-- Which Mux videos belong to which lesson. One row per camera angle.
+-- lesson_code like 'B5.1', angle like 'Front', 'Side' or 'Overhead',
+-- mux_playback_id from the Mux asset page. Trim every angle of a lesson to the
+-- same start so switching cameras lands on the same moment.
+-- sort decides the button order (lowest first, and the one that plays first).
 create table if not exists public.videos (
-  lesson_code text primary key,
+  lesson_code text not null,
+  angle text not null default 'Front',
+  sort integer not null default 0,
   mux_playback_id text not null,
   duration_seconds integer,
-  created_at timestamptz not null default now()
+  created_at timestamptz not null default now(),
+  primary key (lesson_code, angle)
 );
+
+-- Upgrade from the first version (one video per lesson). Safe to run again.
+alter table public.videos add column if not exists angle text not null default 'Front';
+alter table public.videos add column if not exists sort integer not null default 0;
+do $$
+begin
+  if exists (
+    select 1 from information_schema.key_column_usage
+    where table_schema = 'public' and table_name = 'videos' and constraint_name = 'videos_pkey'
+    group by constraint_name having count(*) = 1
+  ) then
+    alter table public.videos drop constraint videos_pkey;
+    alter table public.videos add primary key (lesson_code, angle);
+  end if;
+end $$;
 
 alter table public.videos enable row level security;
 -- Playback IDs are useless without a signed token from the site, so anyone may read them.

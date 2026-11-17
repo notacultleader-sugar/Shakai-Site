@@ -33,8 +33,14 @@ Every lesson (code, title, module, level) is in `src/content/catalog.json`, copi
 I = Intermediate, A and X = Pro. The six F1 starter lessons are placeholders to confirm.
 
 To put a video on a lesson: upload it to Mux with the **signed** playback policy, then in
-Supabase > Table editor > `videos` add a row with the lesson code (like `B5.1`) and the
-Mux playback ID. Lessons without a video show "Video coming soon".
+Supabase > Table editor > `videos` add a row with the lesson code (like `B5.1`), the camera
+`angle` (like `Front`) and the Mux playback ID.
+
+**Camera angles:** film a lesson from several cameras, upload each angle to Mux as its own
+video, and add one row per angle (same lesson code, angles like `Front`, `Side`,
+`Overhead`). The player shows a button for each angle and switches at the same moment, so
+trim every angle to start at the same point. `sort` sets the button order; the lowest plays
+first. A lesson with one angle shows no buttons. Lessons without a video show "Video coming soon".
 
 ## Demo mode
 

@@ -58,12 +58,28 @@ export async function getCompleted(viewer: Viewer): Promise<Set<string>> {
   return new Set((data || []).map((r) => r.lesson_code as string));
 }
 
-// Mux playback IDs for lessons that have a video uploaded.
-export async function getVideos(codes: string[]): Promise<Map<string, { playbackId: string; seconds: number | null }>> {
+export type Angle = { label: string; playbackId: string };
+export type LessonVideo = { angles: Angle[]; seconds: number | null };
+
+// Mux playback IDs for lessons that have a video uploaded, one per camera angle.
+export async function getVideos(codes: string[]): Promise<Map<string, LessonVideo>> {
   if (isDemo() || codes.length === 0) return new Map();
   const sb = await supabaseServer();
-  const { data } = await sb.from("videos").select("lesson_code, mux_playback_id, duration_seconds").in("lesson_code", codes);
-  return new Map((data || []).filter((r) => r.mux_playback_id).map((r) => [r.lesson_code, { playbackId: r.mux_playback_id, seconds: r.duration_seconds }]));
+  const { data } = await sb
+    .from("videos")
+    .select("lesson_code, angle, sort, mux_playback_id, duration_seconds")
+    .in("lesson_code", codes)
+    .order("sort")
+    .order("angle");
+  const out = new Map<string, LessonVideo>();
+  for (const r of data || []) {
+    if (!r.mux_playback_id) continue;
+    const v = out.get(r.lesson_code) || { angles: [], seconds: null };
+    v.angles.push({ label: r.angle || "Front", playbackId: r.mux_playback_id });
+    v.seconds = v.seconds ?? r.duration_seconds ?? null;
+    out.set(r.lesson_code, v);
+  }
+  return out;
 }
 
 // How many founding member spots are left, or null if we can't tell (demo mode).
