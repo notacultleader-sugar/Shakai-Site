@@ -75,7 +75,7 @@ export async function getVideos(codes: string[]): Promise<Map<string, LessonVide
   for (const r of data || []) {
     if (!r.mux_playback_id) continue;
     const v = out.get(r.lesson_code) || { angles: [], seconds: null };
-    v.angles.push({ label: r.angle || "Front", playbackId: r.mux_playback_id });
+    v.angles.push({ label: r.angle || "Side", playbackId: r.mux_playback_id });
     v.seconds = v.seconds ?? r.duration_seconds ?? null;
     out.set(r.lesson_code, v);
   }

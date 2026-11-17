@@ -34,13 +34,13 @@ create trigger on_auth_user_created after insert on auth.users
   for each row execute function public.handle_new_user();
 
 -- Which Mux videos belong to which lesson. One row per camera angle.
--- lesson_code like 'B5.1', angle like 'Front', 'Side' or 'Overhead',
+-- lesson_code like 'B5.1', angle like 'Side' or 'Barber''s view',
 -- mux_playback_id from the Mux asset page. Trim every angle of a lesson to the
 -- same start so switching cameras lands on the same moment.
 -- sort decides the button order (lowest first, and the one that plays first).
 create table if not exists public.videos (
   lesson_code text not null,
-  angle text not null default 'Front',
+  angle text not null default 'Side',
   sort integer not null default 0,
   mux_playback_id text not null,
   duration_seconds integer,
@@ -49,7 +49,7 @@ create table if not exists public.videos (
 );
 
 -- Upgrade from the first version (one video per lesson). Safe to run again.
-alter table public.videos add column if not exists angle text not null default 'Front';
+alter table public.videos add column if not exists angle text not null default 'Side';
 alter table public.videos add column if not exists sort integer not null default 0;
 do $$
 begin

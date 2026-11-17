@@ -47,9 +47,8 @@
       ]
     ],
     "angles": [
-      "Front",
       "Side",
-      "Overhead"
+      "Barber's view"
     ]
   },
   "B5.1": {
@@ -136,9 +135,8 @@
       ]
     ],
     "angles": [
-      "Front",
       "Side",
-      "Overhead"
+      "Barber's view"
     ]
   },
   "I1.3": {
@@ -184,9 +182,8 @@
       ]
     ],
     "angles": [
-      "Front",
       "Side",
-      "Overhead"
+      "Barber's view"
     ]
   }
 }
