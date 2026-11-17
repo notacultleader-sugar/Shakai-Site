@@ -45,6 +45,7 @@ export type LessonDetails = {
   learn: string[];
   tools: string[];
   chapters: [number, string][];
+  angles?: string[]; // demo preview only
   sample: boolean; // true when written notes exist for this lesson
 };
 

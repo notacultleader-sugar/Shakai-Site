@@ -9,6 +9,7 @@ import { planFor } from "@/lib/plans";
 import { getCompleted, getVideos, getViewer } from "@/lib/viewer";
 import { Chapters } from "./Chapters";
 import { DoneButton } from "./DoneButton";
+import { DemoAngles } from "./DemoAngles";
 import { Player } from "./Player";
 
 type Params = { params: Promise<{ code: string }> };
@@ -29,8 +30,15 @@ export default async function LessonPage({ params }: Params) {
   const done = await getCompleted(v);
   const videos = await getVideos(open ? mod.lessons.filter((l) => canWatch(v, l)).map((l) => l.code) : []);
   const video = videos.get(lesson.code);
-  const tokens = open && video ? await muxTokens(video.playbackId) : null;
-  const playable = Boolean(open && video && tokens);
+  // Signed tokens for every camera angle of this lesson.
+  const angles =
+    open && video
+      ? (await Promise.all(video.angles.map(async (a) => ({ ...a, tokens: await muxTokens(a.playbackId) })))).filter(
+          (a): a is typeof a & { tokens: NonNullable<typeof a.tokens> } => a.tokens !== null,
+        )
+      : [];
+  const playable = angles.length > 0;
+  const angleCount = playable ? angles.length : v.demo ? info.angles?.length ?? 1 : 1;
   const prev = prevLesson(lesson);
   const next = nextLesson(lesson);
   const needs = planFor(lesson.tier);
@@ -50,7 +58,7 @@ export default async function LessonPage({ params }: Params) {
         <div className="watch-video">
           <div className="screen">
             {playable ? (
-              <Player playbackId={video!.playbackId} tokens={tokens!} title={`${lesson.code} ${lesson.title}`} />
+              <Player angles={angles} title={`${lesson.code} ${lesson.title}`} />
             ) : open ? (
               <div className="over poster">
                 <span className="poster-kanji" aria-hidden="true">社会</span>
@@ -59,6 +67,7 @@ export default async function LessonPage({ params }: Params) {
                 <p className="big">{lesson.title}</p>
                 <p className="small muted">{v.demo ? "Sample page. The lesson video plays here once it's uploaded." : "We're filming this one now. It will play here as soon as it's ready."}</p>
                 {minutes && <span className="poster-time">{minutes}:00</span>}
+                {v.demo && info.angles && info.angles.length > 1 && <DemoAngles labels={info.angles} />}
               </div>
             ) : (
               <div className="over">
@@ -96,6 +105,7 @@ export default async function LessonPage({ params }: Params) {
             <span className="pill y">{lesson.code}</span>
             <span className="pill">{level.name}</span>
             {minutes && <span className="pill">{minutes} min</span>}
+            {angleCount > 1 && <span className="pill">{angleCount} camera angles</span>}
             {done.has(lesson.code) && <span className="pill ok">Done</span>}
           </div>
           <h1 className="h2 watch-title">{lesson.title}</h1>
